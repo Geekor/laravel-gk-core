@@ -1,0 +1,31 @@
+{
+    "name": "geekor/laravel-gk-core",
+    "description": "Geekor's laravel core for v9.x",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Geekor",
+            "email": "geekor@163.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Geekor\\Core\\": "src"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php" : "^7.3|^8.0|^8.1",
+        "illuminate/http": "^6.9|^7.0|^8.0|^9.0",
+        "illuminate/fundation": "^6.9|^7.0|^8.0|^9.0",
+        "illuminate/support": "^6.9|^7.0|^8.0|^9.0"
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+                "geekor/core"
+            ]
+        }
+    }
+}
