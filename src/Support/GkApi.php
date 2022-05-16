@@ -17,7 +17,7 @@ use Illuminate\Support\Arr;
  * Api::failx(Api::API_PARAM_MISS, '详细信息');
  * Api::failx(Api::API_PARAM_MISS, '详细信息', 401);
  */
-class ApiEventConstant
+class GkApi
 {
     // HTTP STAUS
 
