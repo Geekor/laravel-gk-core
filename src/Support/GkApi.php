@@ -125,7 +125,7 @@ class GkApi
     /**
      * 认证失败
      */
-    public static function failx401($detail = null)
+    public static function failxUnauthenticated($detail = null)
     {
         return self::failx(self::UNAUTHENTICATED, $detail, 401);
     }
@@ -133,7 +133,7 @@ class GkApi
     /**
      * 禁止访问（没有权限）
      */
-    public static function failx403($detail = null)
+    public static function failxForbidden($detail = null)
     {
         return self::failx(self::FORBIDDEN, $detail, 403);
     }
@@ -141,7 +141,7 @@ class GkApi
     /**
      * 没找到指定对象
      */
-    public static function failx404($detail = null)
+    public static function failxNotFound($detail = null)
     {
         return self::failx(self::NOT_FOUND, $detail, 404);
     }
@@ -149,7 +149,7 @@ class GkApi
     /**
      *  方法错误
      */
-    public static function failx405($detail = null)
+    public static function failxBadMethod($detail = null)
     {
         return self::failx(self::METHOD_NOT_ALLOWED, $detail, 405);
     }
@@ -157,12 +157,12 @@ class GkApi
     /**
      * 请求过于频繁
      */
-    public static function failx429($detail = null)
+    public static function failxTooManyRequsts($detail = null)
     {
         return self::failx(self::TOO_MANY_REQUESTS, $detail, 429);
     }
 
-    public static function failx500($detail = null)
+    public static function failxServerError($detail = null)
     {
         return self::failx(self::SERVER_ERROR, $detail, 500);
     }
