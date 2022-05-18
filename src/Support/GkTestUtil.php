@@ -21,8 +21,11 @@ class GkTestUtil
         return $arr;
     }
 
-    public static function getResponseStatusCode(TestResponse $resp)
+    /**
+     * 判断 状态码 是否在被允许的 codes 列表中
+     */
+    public static function isAcceptableStatus(TestResponse $resp, array $codes)
     {
-        return $resp->baseResponse->getStatusCode();
+        return in_array($resp->getStatusCode(), $codes);
     }
 }
