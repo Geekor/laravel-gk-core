@@ -20,4 +20,9 @@ class GkTestUtil
 
         return $arr;
     }
+
+    public static function getResponseStatusCode(TestResponse $resp)
+    {
+        return $resp->baseResponse->getStatusCode();
+    }
 }
