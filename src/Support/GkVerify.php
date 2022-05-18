@@ -22,11 +22,21 @@ class GkVerify
      *
      * @param  Request  $request
      * @param  Array   $rules
-     * @return boolean
      */
-    public static function checkRequestFailed(Request $request, Array $rules)
-    {
-        return Validator::make($request->all(), $rules)->fails();
+    public static function checkRequestFailed(Request $request, Array $rules, $messages = [
+        'required' => '[:attribute] required',
+        'email' => 'email format invalid',
+    ]) {
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        // foreach ($errors->get('email') as $message) {
+        //     var_dump($message);
+        // }
+
+        return [
+            'failed' => $validator->fails(),
+            'errors' => $validator->errors()->toArray()
+        ];
     }
 
     /**
