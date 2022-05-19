@@ -34,11 +34,17 @@ class ServiceProvider extends BaseServiceProvider
     {
         $this->loadTranslationsFrom(__DIR__.'/../lang', AppConst::LANG_NAMESPACE);
 
-        if (app()->runningInConsole()) {
-            $this->publishes([
-                __DIR__.'/../lang/' => lang_path('vendor/' . AppConst::LANG_NAMESPACE),
-            ], AppConst::LANG_NAMESPACE . '-lang');
-        }
+
+        // TODO:
+        //-------
+        // 目前来说没必要把翻译发布出去，
+        // 后续可以考虑通过调用命令的方式发布到主项目
+        //
+        // if (app()->runningInConsole()) {
+        //     $this->publishes([
+        //         __DIR__.'/../lang/' => lang_path('vendor/' . AppConst::LANG_NAMESPACE),
+        //     ], AppConst::LANG_NAMESPACE . '-lang');
+        // }
 
     }
 }

@@ -110,7 +110,7 @@ class GkApi
         $resp = [
             'code' => $code,
             'message' => 'Error',
-            'detail' => [],
+            'detail' => '',
         ];
 
         if (Arr::has(self::_MSGS_, $code)) {

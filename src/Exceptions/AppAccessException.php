@@ -5,7 +5,10 @@ namespace Geekor\Core\Exceptions;
 use Exception;
 use Geekor\Core\AppConst;
 
-class PermissionException extends Exception
+/**
+ * 用户没有某个 APP 的访问权限
+ */
+class AppAccessException extends Exception
 {
     protected $status = 401;
     protected $message = 'no access permission';

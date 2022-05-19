@@ -10,7 +10,7 @@ namespace Geekor\Core;
  */
 class AppConst
 {
-    public const LANG_NAMESPACE = 'gk-core';
+    public const LANG_NAMESPACE = 'geekor-core';
 
     //========================================
 

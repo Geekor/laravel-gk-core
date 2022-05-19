@@ -3,6 +3,7 @@
 namespace Geekor\Core\Exceptions;
 
 use Exception;
+use Geekor\Core\AppConst;
 
 class InputException extends Exception
 {
@@ -18,7 +19,7 @@ class InputException extends Exception
 
         if (empty($message)) {
             // 写在这里主要是为了翻译（没法写在上面）
-            $this->message = trans('string.bm_input_error');
+            $this->message = AppConst::tr('api.API_PARAM_ERROR');
 
         } else {
             $this->message = $message;
