@@ -23,5 +23,12 @@
     },
     "require-dev": {
         "illuminate/testing": "^6.9|^7.0|^8.0|^9.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Geekor\\Core\\ServiceProvider"
+            ]
+        }
     }
 }

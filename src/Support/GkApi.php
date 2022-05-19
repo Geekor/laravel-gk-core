@@ -2,6 +2,7 @@
 
 namespace Geekor\Core\Support;
 
+use Geekor\Core\AppConst as GK;
 use Illuminate\Support\Arr;
 
 /**
@@ -24,7 +25,7 @@ class GkApi
     // =================================================================
     //   CODE DEFINE
     // =================================================================
-    const SUCCESS = '1000';
+    const SUCCESS = 1000;
 
     //------------------------------------------
     const JUST_FAILED = 4000;
@@ -44,20 +45,20 @@ class GkApi
     // === MESSAGE ======================================================
     const _MSGS_ = [
         //... MISC
-        1000 => 'SUCCESS',
+        1000 => 'api.SUCCESS',
 
         // ---------------- ERROR ----------------------
-        4000 => 'SEE_DETAIL',
-        4002 => 'API_REQUEST_ERROR',
-        4004 => 'API_PARAM_MISS',
-        4005 => 'API_PARAM_ERROR',
-        4010 => 'UNAUTHENTICATED',
-        4030 => 'FORBIDDEN',
-        4040 => 'NOT_FOUND',
-        4050 => 'METHOD_NOT_ALLOWED',
-        4290 => 'TOO_MANY_REQUESTS',
+        4000 => 'api.SEE_DETAIL',
+        4002 => 'api.API_REQUEST_ERROR',
+        4004 => 'api.API_PARAM_MISS',
+        4005 => 'api.API_PARAM_ERROR',
+        4010 => 'api.UNAUTHENTICATED',
+        4030 => 'api.FORBIDDEN',
+        4040 => 'api.NOT_FOUND',
+        4050 => 'api.METHOD_NOT_ALLOWED',
+        4290 => 'api.TOO_MANY_REQUESTS',
 
-        5000 => 'SERVER_ERROR',
+        5000 => 'api.SERVER_ERROR',
     ];
 
     // =================================================================
@@ -66,7 +67,8 @@ class GkApi
 
     public static function msg($code) {
         $k = self::_MSGS_[$code];
-        return trans($k);
+
+        return GK::tr($k);
     }
 
     public static function success($data = null, $status=200)
