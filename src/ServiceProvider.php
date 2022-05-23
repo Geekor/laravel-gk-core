@@ -44,8 +44,8 @@ class ServiceProvider extends BaseServiceProvider
         //
         // if (app()->runningInConsole()) {
         //     $this->publishes([
-        //         __DIR__.'/../lang/' => lang_path('vendor/' . AppConst::LANG_NAMESPACE),
-        //     ], AppConst::LANG_NAMESPACE . '-lang');
+        //         __DIR__.'/../lang/' => lang_path('vendor/' . Consts::LANG_NAMESPACE),
+        //     ], Consts::LANG_NAMESPACE . '-lang');
         // }
 
     }
