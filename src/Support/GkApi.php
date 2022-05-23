@@ -2,7 +2,7 @@
 
 namespace Geekor\Core\Support;
 
-use Geekor\Core\AppConst as GK;
+use Geekor\Core\Consts as GK;
 use Illuminate\Support\Arr;
 
 /**

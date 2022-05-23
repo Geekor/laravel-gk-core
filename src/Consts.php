@@ -3,12 +3,12 @@
 namespace Geekor\Core;
 
 /**
- * use Geekor\Core\AppConst as GK;
+ * use Geekor\Core\Consts as GK;
  *
  * GK::tr('xxx');
  *
  */
-class AppConst
+class Consts
 {
     public const LANG_NAMESPACE = 'geekor-core';
 

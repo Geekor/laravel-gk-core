@@ -5,6 +5,8 @@ namespace Geekor\Core;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
+use Geekor\Core\Consts;
+
 class ServiceProvider extends BaseServiceProvider
 {
     /**
@@ -32,7 +34,7 @@ class ServiceProvider extends BaseServiceProvider
      */
     protected function loadTranslations()
     {
-        $this->loadTranslationsFrom(__DIR__.'/../lang', AppConst::LANG_NAMESPACE);
+        $this->loadTranslationsFrom(__DIR__.'/../lang', Consts::LANG_NAMESPACE);
 
 
         // TODO:
